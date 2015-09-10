@@ -1,9 +1,8 @@
 # profiles::nasic_setup.pp
 class profiles::basic_setup {
-
-    $ssh_port = 1022
-    $default_user = 'admin'
-    $default_pwd = 'YOUR DEFAULT PASSWORD HERE'
+    $ssh_port     = hiera('profiles::basic_setup::ssh_port')
+    $default_user = hiera('profiles::basic_setup::default_user')
+    $default_pwd  = hiera('profiles::basic_setup::default_pwd')
 
     file_line { 'sshd_permitrootlogin':
         path    => '/etc/ssh/sshd_config',

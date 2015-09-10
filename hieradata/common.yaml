@@ -1,0 +1,4 @@
+---
+profiles::basic_setup::ssh_port: 2222
+profiles::basic_setup::default_user: 'THE ADMIN'
+profiles::basic_setup::default_pwd: 'THE PASSWORD'
