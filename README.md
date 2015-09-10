@@ -1,7 +1,14 @@
 # linux_basic_setup
 Puppet manifests to setup a brand new host quickly
 
+### Distributions support
 Verified so far on a CentOS 7 host from DigitalOcean
+
+### Pre-requisites
+```
+sudo puppet module install puppetlabs-firewall
+sudo puppet module install saz-sudo
+```
 
 ### What these modules do
 Change SSH settings:
