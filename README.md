@@ -26,9 +26,16 @@ Create a default user:
 - 'admin' is sudoer
 
 ### To apply
+Edit hiera data and then:
 ```
 sudo puppet apply -v --hiera_config=hiera.yaml -e "include roles::basic_setup" --modulepath=modules/:/etc/puppet/modules --show_diff --noop
 sudo puppet apply -v --hiera_config=hiera.yaml -e "include roles::basic_setup" --modulepath=modules/:/etc/puppet/modules --show_diff
+```
+or you can edit and execute initial_setup.sh:
+
+```
+vim initial_setup.sh
+sh initial_setup.sh
 ```
 
 
